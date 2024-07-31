@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{% static 'css/calculator-view-style.css' %}">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display"></div>
+        <div class="buttons">
+            <button class="button" onclick="appendToCal('7')">7</button>
+            <button class="button" onclick="appendToCal('8')">8</button>
+            <button class="button" onclick="appendToCal('9')">9</button>
+            <button class="button operator" onclick="appendToCal('/')">÷</button>
+            <button class="button" onclick="appendToCal('4')">4</button>
+            <button class="button" onclick="appendToCal('5')">5</button>
+            <button class="button" onclick="appendToCal('6')">6</button>
+            <button class="button operator" onclick="appendToCal('*')">×</button>
+            <button class="button" onclick="appendToCal('1')">1</button>
+            <button class="button" onclick="appendToCal('2')">2</button>
+            <button class="button" onclick="appendToCal('3')">3</button>
+            <button class="button operator" onclick="appendToCal('-')">-</button>
+            <button class="button" onclick="appendToCal('0')">0</button>
+            <button class="button" onclick="appendToCal('.')">.</button>
+            <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button operator" onclick="appendToCal('+')">+</button>
+            <button class="button equals" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    <script src="{% static 'JS/app.js' %}"></script>
+</body>
+</html>
